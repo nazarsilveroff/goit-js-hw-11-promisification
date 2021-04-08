@@ -4,6 +4,9 @@ const users = [
   { name: 'Ajax', active: true },
   { name: 'Lux', active: false },
 ];
+// document.querySelector('.output').insertAdjacentHTML('beforeend',`<li>Resolved after ${updatedUsers}ms</li>`)
+const logger = updatedUsers => document.querySelector('.output').insertAdjacentHTML('beforeend',`<li>Resolved after ${JSON.stringify(updatedUsers)}ms</li>`)
+
 
 document.querySelector('.task2').addEventListener('click', (e) => {
     const toggleUserState = (allUsers, userName) => {
@@ -13,10 +16,11 @@ document.querySelector('.task2').addEventListener('click', (e) => {
         })
     }
 
-    toggleUserState(users, 'Mango').then(updatedUsers => console.table(updatedUsers));
-    toggleUserState(users, 'Lux').then(updatedUsers => console.table(updatedUsers))
+    toggleUserState(users, 'Mango').then(logger)
+    toggleUserState(users, 'Lux').then(logger)
     
 });
+
 
 
 document.querySelector('.reload').addEventListener('click', (e) => {

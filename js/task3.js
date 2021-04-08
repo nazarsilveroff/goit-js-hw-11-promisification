@@ -37,10 +37,14 @@ document.querySelector('.task3').addEventListener('click', (e) => {
  });
 
 const logSuccess = (id, time) => {
+    document.querySelector('.output').insertAdjacentHTML('beforeend', `<li class="green">Transaction ${id} processed in ${time}ms</li>`);
+
   console.log(`Transaction ${id} processed in ${time}ms`);
 };
 
 const logError = id => {
+    document.querySelector('.output').insertAdjacentHTML('beforeend', `<li class="red">Error processing transaction ${id}. Please try again later.</li>`);
+    
   console.warn(`Error processing transaction ${id}. Please try again later.`);
 };
 
