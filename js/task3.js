@@ -19,6 +19,7 @@ document.querySelector('.task3').addEventListener('click', (e) => {
         });
     };
 
+    
     makeTransaction({ id: 70, amount: 150 })
         .then(logSuccess)
         .catch(logError);

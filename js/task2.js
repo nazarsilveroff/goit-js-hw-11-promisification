@@ -21,6 +21,7 @@ document.querySelector('.task2').addEventListener('click', (e) => {
     
 });
 
+
 document.querySelector('.reload').addEventListener('click', (e) => {
     window.location.reload()
 });
