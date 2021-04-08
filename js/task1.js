@@ -17,6 +17,7 @@ document.querySelector('.task1').addEventListener('click', (e) => {
     .then(logger); // Resolved after 1500ms
   
 });
+
 document.querySelector('.reload').addEventListener('click', (e) => {
   window.location.reload()
 })

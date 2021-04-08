@@ -18,6 +18,7 @@ document.querySelector('.task3').addEventListener('click', (e) => {
             }, delay);
         });
     };
+
     makeTransaction({ id: 70, amount: 150 })
         .then(logSuccess)
         .catch(logError);
@@ -33,6 +34,7 @@ document.querySelector('.task3').addEventListener('click', (e) => {
     makeTransaction({ id: 73, amount: 100 })
         .then(logSuccess)
         .catch(logError);
+    
  });
 
 const logSuccess = (id, time) => {
