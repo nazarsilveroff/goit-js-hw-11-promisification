@@ -1,7 +1,6 @@
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
-
 document.querySelector('.task3').addEventListener('click', (e) => {
     const makeTransaction = (transaction) => {
         const delay = randomIntegerFromInterval(200, 500);
